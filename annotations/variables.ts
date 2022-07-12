@@ -33,3 +33,10 @@ const logNumber: (i: number) => void = (i: number) => {
   // void is what we expect to return
   console.log(i);
 };
+
+// When to use annotations
+// 1) Function that returns the 'any' type
+const json = '{"x":30, "y":65}';
+const coordinates: { x: number; y: number } = JSON.parse(json);
+// JSON.parse() returns any type
+console.log(coordinates);
